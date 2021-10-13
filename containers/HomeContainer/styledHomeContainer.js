@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 1350px;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Nav = styled.nav`

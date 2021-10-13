@@ -14,10 +14,8 @@ export const HomeContainer = () => {
                 <BlogLink>New</BlogLink>
                 <span>/</span>
                 <BlogLink>Popular</BlogLink>
-
-                <Post />
             </Nav>
-            Posts
+            <Post />
         </Container>
     );
 };
