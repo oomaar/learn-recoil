@@ -1,3 +1,4 @@
+import { Post } from "../../components";
 import {
     Container,
     Nav,
@@ -13,6 +14,8 @@ export const HomeContainer = () => {
                 <BlogLink>New</BlogLink>
                 <span>/</span>
                 <BlogLink>Popular</BlogLink>
+
+                <Post />
             </Nav>
             Posts
         </Container>
