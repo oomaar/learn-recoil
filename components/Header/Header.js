@@ -1,5 +1,5 @@
-import { useRecoilState } from "recoil";
-import { darkModeState } from "../../global/GlobalState/GlobalState";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { darkModeState, handleDarkMode } from "../../global/GlobalState/GlobalState";
 import {
     Nav,
     HeaderTag,
@@ -12,8 +12,8 @@ import {
 } from "./styledHeader";
 
 export const Header = () => {
-    const [darkMode, setDarkMode] = useRecoilState(darkModeState);
-    const handleDarkMode = () => setDarkMode(!darkMode);
+    const darkMode = useRecoilValue(darkModeState);
+    const setDarkModeState = useSetRecoilState(handleDarkMode);
 
     return (
         <Nav>
@@ -27,7 +27,7 @@ export const Header = () => {
                 </TitleContainer>
 
                 <DarkButtonContainer>
-                    <DarkButton onClick={handleDarkMode}>
+                    <DarkButton onClick={setDarkModeState}>
                         {darkMode ? (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
