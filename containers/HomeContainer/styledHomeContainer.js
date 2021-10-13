@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: ${({ theme }) => theme.colors.titleColor};
 `;
 
 export const BlogLink = styled.p`

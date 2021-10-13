@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  border-bottom: 4px solid #333;
+  border-bottom: 4px solid ${({ theme }) => theme.colors.titleColor};
 `;
 
 export const HeaderTag = styled.header`
@@ -20,7 +20,7 @@ export const HeaderTag = styled.header`
 
 export const Logo = styled.div`
   background: transparent;
-  border: 5px solid #000;
+  border: 5px solid ${({ theme }) => theme.colors.titleColor};
   height: 50px;
   width: 50px;
   transform: rotate(-45deg);
@@ -30,7 +30,7 @@ export const Logo = styled.div`
 export const LogoLine = styled.div`
   width: 40px;
   height: 5px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.titleColor};
   position: absolute;
   top: 30%;
   left: 0;
@@ -44,6 +44,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
   font-size: 2rem;
   margin: 0;
+  color: ${({ theme }) => theme.colors.titleColor};
 
   @media screen and (max-width: 400px) {
     font-size: 1.5rem;
@@ -59,7 +60,10 @@ export const DarkButton = styled.button`
   background: transparent;
   border: 0;
   outline: 0;
-  color: #000;
   padding: 0.5rem 1rem;
   cursor: pointer;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.titleColor};
+  }
 `;
