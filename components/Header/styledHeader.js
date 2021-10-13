@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
+export const Nav = styled.nav`
+  border-bottom: 4px solid #333;
+`;
+
 export const HeaderTag = styled.header`
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border-bottom: 4px solid #333;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
 
   @media screen and (max-width: 400px) {
     justify-content: space-between;

@@ -1,4 +1,3 @@
-import { Header } from "../../components";
 import {
     Container,
 } from "./styledHomeContainer";
@@ -6,7 +5,7 @@ import {
 export const HomeContainer = () => {
     return (
         <Container>
-            <Header />
+            Posts
         </Container>
     );
 };
