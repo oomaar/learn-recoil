@@ -1,10 +1,13 @@
+import { RecoilRoot } from "recoil";
 import { Layout } from "../global";
 
 const App = ({ Component, pageProps }) => {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <RecoilRoot>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </RecoilRoot>
     );
 };
 
