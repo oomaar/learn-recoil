@@ -1,3 +1,4 @@
+import { GlobalStyle } from "..";
 import {
     LayoutContainer,
 } from "./styledLayout";
@@ -5,6 +6,7 @@ import {
 export const Layout = ({ children }) => {
     return (
         <LayoutContainer>
+            <GlobalStyle />
             {children}
         </LayoutContainer>
     );
